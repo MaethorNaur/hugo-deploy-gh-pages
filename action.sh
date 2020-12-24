@@ -44,7 +44,6 @@ cd site
 echo "Building the Hugo site with: 'hugo ${HUGO_ARGS}'"
 npm i
 hugo "${HUGO_ARGS}"
-cat ./hugo_stats.json
 TARGET_REPO_URL="https://${GITHUB_TOKEN}@github.com/${TARGET_REPO}.git"
 
 rm -rf .git
