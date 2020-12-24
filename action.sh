@@ -41,8 +41,8 @@ echo "Using '${URL}' to download Hugo"
 curl -sSL "${URL}" > /tmp/hugo.deb && dpkg --force architecture -i /tmp/hugo.deb
 
 cd site
-
 echo "Building the Hugo site with: 'hugo ${HUGO_ARGS}'"
+npm i
 hugo "${HUGO_ARGS}"
 
 TARGET_REPO_URL="https://${GITHUB_TOKEN}@github.com/${TARGET_REPO}.git"
