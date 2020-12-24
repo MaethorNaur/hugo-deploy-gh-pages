@@ -8,7 +8,7 @@ RUN apt-get update && \
 	nodejs \
 	git && \
 	rm -rf /var/lib/apt/lists/*
-
+RUN npm i -g postcss postcss-cli esbuild
 COPY action.sh /usr/bin/action.sh
 
 ENTRYPOINT ["action.sh"]
