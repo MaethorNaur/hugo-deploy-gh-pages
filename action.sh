@@ -40,6 +40,8 @@ URL=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${EXTE
 echo "Using '${URL}' to download Hugo"
 curl -sSL "${URL}" > /tmp/hugo.deb && dpkg --force architecture -i /tmp/hugo.deb
 
+cd site
+
 echo "Building the Hugo site with: 'hugo ${HUGO_ARGS}'"
 hugo "${HUGO_ARGS}"
 
